@@ -1,0 +1,19 @@
+[package]
+name = "lppweb"
+version = "1.0.0"
+edition = "2021"
+description = "Web server package for LPPO (requires LPPNet)"
+author = "Alexander Matzen"
+license = "MIT"
+repository = "https://github.com/AlexMatzen01/LPPWeb"
+
+[lib]
+name = "lppweb"
+crate-type = ["cdylib"]
+
+[dependencies]
+once_cell = "1.17"
+sha2 = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+libloading = "0.8"

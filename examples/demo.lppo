@@ -1,0 +1,66 @@
+// LPPWeb example: hashing, storage, and crypto
+use LPPWeb;
+use LPPNet;
+
+pub proc main() -> Void {
+    out "=== LPPWeb Demo ===";
+
+    // --- Hashing ---
+    let own buf1: Int64 = buf_new();
+    let own set_ok: Bool = buf_set(buf1, "hello world");
+    out "buf_set:", set_ok;
+
+    let own sha_buf: Int64 = web_sha256_buf(buf1);
+    let own sha_hex: Str = buf_get(sha_buf);
+    out "SHA-256(hello world):", sha_hex;
+
+    let own djb2_val: Int64 = web_djb2_buf(buf1);
+    out "DJB2(hello world):", djb2_val;
+
+    // --- Storage ---
+    let own key_buf: Int64 = buf_new();
+    let own set_key_ok: Bool = buf_set(key_buf, "user:1");
+    let own val_buf: Int64 = buf_new();
+    let own set_val_ok: Bool = buf_set(val_buf, "{\"name\":\"Alice\",\"role\":\"admin\"}");
+
+    let own put_ok: Bool = web_storage_put(key_buf, val_buf);
+    out "storage_put:", put_ok;
+
+    let own get_buf: Int64 = web_storage_get(key_buf);
+    if get_buf != -1 {
+        let own stored: Str = buf_get(get_buf);
+        out "storage_get:", stored;
+    }
+
+let own exists: Bool = web_storage_exists(key_buf);
+out "storage_exists:", exists;
+
+let own list_buf: Int64 = web_storage_list();
+let own keys: Str = buf_get(list_buf);
+out "storage_list:", keys;
+
+    // --- Crypto (XOR) ---
+let own key2_buf: Int64 = buf_new();
+let own set_key2_ok: Bool = buf_set(key2_buf, "secretkey");
+let own data_buf: Int64 = buf_new();
+let own set_data_ok: Bool = buf_set(data_buf, "sensitive data");
+
+let own enc_buf: Int64 = web_xor_encrypt(key2_buf, data_buf);
+let own encrypted: Str = buf_get(enc_buf);
+out "encrypted:", encrypted;
+
+let own dec_buf: Int64 = web_xor_decrypt(key2_buf, enc_buf);
+let own decrypted: Str = buf_get(dec_buf);
+out "decrypted:", decrypted;
+
+    // --- Security headers ---
+let own sec_headers_buf: Int64 = web_security_headers();
+let own sec_headers: Str = buf_get(sec_headers_buf);
+out "security headers:", sec_headers;
+
+let own cors_buf: Int64 = web_cors(buf_new());
+let own cors: Str = buf_get(cors_buf);
+out "cors headers:", cors;
+
+out "=== LPPWeb Demo Complete ===";
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "package": {
+    "identifier": "LPPWeb",
+    "display_name": "LPPWeb",
+    "version": "1.0.0",
+    "author": "Alexander Matzen",
+    "description": "Batteries-included web server package for LPPO: hosting, routing, local storage, database, encryption, hashing, and security headers. Requires LPPNet.",
+    "license": "MIT",
+    "repository": "https://github.com/AlexMatzen01/LPPWeb",
+    "lppo_version": ">=5.3.0",
+    "dependencies": {
+      "lppnet": "1.0.0"
+    },
+    "build": {
+      "system": "cargo",
+      "manifest": "Cargo.toml",
+      "features": [],
+      "release": true
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "functions": [
+    {
+      "name": "web_sha256_buf",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_djb2_buf",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_xor_encrypt",
+      "params": ["Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_xor_decrypt",
+      "params": ["Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_storage_put",
+      "params": ["Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_storage_get",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_storage_delete",
+      "params": ["Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_storage_exists",
+      "params": ["Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_storage_list",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_db_open",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_db_close",
+      "params": ["Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_exec",
+      "params": ["Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_query",
+      "params": ["Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_db_insert",
+      "params": ["Int64", "Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_select",
+      "params": ["Int64", "Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_db_update",
+      "params": ["Int64", "Int64", "Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_delete",
+      "params": ["Int64", "Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_count",
+      "params": ["Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_db_create_table",
+      "params": ["Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_drop_table",
+      "params": ["Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_db_list_tables",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_header_set",
+      "params": ["Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_header_clear",
+      "params": [],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_security_headers",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_cors",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_hsts",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_csp",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_x_frame_options",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_x_content_type_options",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_route_match",
+      "params": ["Int64", "Int64"],
+      "return_type": "Bool",
+      "symbol": null
+    },
+    {
+      "name": "web_route_extract",
+      "params": ["Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_response_status_line",
+      "params": ["Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_response_build",
+      "params": ["Int64", "Int64", "Int64"],
+      "return_type": "Int64",
+      "symbol": null
+    },
+    {
+      "name": "web_last_error",
+      "params": [],
+      "return_type": "Int64",
+      "symbol": null
+    }
+  ]
+}
